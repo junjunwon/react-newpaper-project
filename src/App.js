@@ -1,13 +1,18 @@
-import Button from './Button'
-import styles from './App.module.css'
+import { AppWrap } from './appStyles';
+import Header from './header/header';
+import Content from './content/content';
+import Footer from './footer/footer';
+
 function App() {
   return (
-    <div>
-      <h1 className = {styles.title }>
-        Welcom Back!
-      </h1>
-      <Button text={"abc"}></Button>
-    </div>
+    <AppWrap>
+      <Header />
+      <Content>
+      </Content>
+      <Footer>
+      </Footer>
+    </AppWrap>
+      
   );
 }
 
