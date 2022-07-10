@@ -1,6 +1,6 @@
 import React from "react";
 import { FooterWrap } from "./footerStyles";
-import Button from "../components/Button";
+import Button from "../../components/Button";
 
 function Footer() {
 	return (

@@ -1,14 +1,15 @@
 import { AppWrap } from './appStyles';
-import Header from './header/header';
-import Content from './content/content';
-import Footer from './footer/footer';
-
+import Header from './pages/header/header';
+import Contents from './pages/contents/contents';
+import Footer from './pages/footer/footer';
 function App() {
+  
+  
   return (
     <AppWrap>
       <Header />
-      <Content>
-      </Content>
+      <Contents>
+      </Contents>
       <Footer>
       </Footer>
     </AppWrap>
