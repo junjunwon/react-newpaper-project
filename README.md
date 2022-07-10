@@ -1,4 +1,4 @@
-# install npm library by myself
+## custom install npm library
 - moment (for datepicker)
 - axios
 - eslint
