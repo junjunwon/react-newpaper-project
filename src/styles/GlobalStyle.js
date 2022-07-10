@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
     //     overflow:scroll;
     // }
     #root{
-        height:812px;
+        height:100vh;
         width: 395px;
         overflow-y:hidden;
         // margin-bottom:60px;
@@ -36,6 +36,15 @@ const GlobalStyle = createGlobalStyle`
         display: flex;
         outline: none;
         padding-left: 10px;
+    }
+    .ant-modal {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width:335px !important;
+		height:480px;
+		border-radius: 16px;
     }
 `;
 

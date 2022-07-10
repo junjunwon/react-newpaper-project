@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HeaderWrap = styled.div`
-	z-index:9999;
+	z-index:10;
 	position: fixed;
 	top: 0;
 	height: 60px;
