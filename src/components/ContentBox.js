@@ -27,15 +27,15 @@ function ContentBox({text, company, name, datetime}) {
 
 const StyledContentBox = styled.div`
 	position:relative;
-	width: 315px;
-	height: 94px;
-	padding: 20px 20px;
+	width: 335px;
+	height: 104px;
+	padding: 10px 20px;
 	background-color:#fff;
-
+	border-radius: 8px;
 	font-style: normal;
 	font-weight: 600;
 	font-size: 18px;
-	margin:20px 10px;
+	margin: 20px 30px;
 
 	img {
 		position: absolute;

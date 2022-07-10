@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
-function ButtonImg({text, imgPath}) {
+function ButtonImg({text, imgPath, onClick}) {
 	return (
-		<StyledButtonImg>
+		<StyledButtonImg
+			onClick={onClick}
+		>
 			<img src={imgPath} alt="image"></img>
 			{text}
 		</StyledButtonImg>
@@ -21,7 +23,7 @@ const StyledButtonImg = styled.button`
 
 	font-weight: 400;
 	font-size: 14px;
-
+	pointer: cursor;
 	img {
 		margin-right: 5px;
 		vertical-align: middle;
