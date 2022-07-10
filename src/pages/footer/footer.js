@@ -1,4 +1,3 @@
-import React from "react";
 import { FooterWrap } from "./footerStyles";
 import Button from "../../components/Button";
 

@@ -4,7 +4,7 @@ export const FooterWrap = styled.div`
 	position: fixed;	
 	width: 395px;
 	height: 85px;
-	bottom: 0;
+	bottom: 0px;
 	background: #000000;
 	border-radius: 30px;
 	margin: 0 auto;

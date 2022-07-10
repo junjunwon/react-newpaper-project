@@ -30,7 +30,7 @@ function Header() {
 			/>
 			<ButtonImg 
 				text="전체 국가"
-				imgPath = "/"
+				imgPath = ""
 				onClick={() => setVisible(true)}
 			/>
 			<ModalFilter

@@ -35,3 +35,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
+
+#### question
+- 페이지별로 상태관리를 어떻게 하는지?
+- hook폴더는 뭘까?
+- 

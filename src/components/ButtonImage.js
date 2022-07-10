@@ -5,14 +5,17 @@ function ButtonImg({text, imgPath, onClick}) {
 		<StyledButtonImg
 			onClick={onClick}
 		>
-			<img src={imgPath} alt="image"></img>
+			{/* <img src={imgPath} alt="image"></img> */}
+			<div>{imgPath === '' ? '' : <img src={imgPath} alt="image"></img>}</div>
 			{text}
 		</StyledButtonImg>
 	)
 }
 
 const StyledButtonImg = styled.button`
-	padding : 10px 10px;
+	height: 34px;
+	line-height: 34px;
+	padding: 0px 10px;
 	text-align: center;
 	letter-spacing: -0.04em;
 	margin-right: 6px;
@@ -23,7 +26,7 @@ const StyledButtonImg = styled.button`
 
 	font-weight: 400;
 	font-size: 14px;
-	pointer: cursor;
+	cursor: pointer;
 	img {
 		margin-right: 5px;
 		vertical-align: middle;
