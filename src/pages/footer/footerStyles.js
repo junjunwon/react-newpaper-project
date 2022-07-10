@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const FooterWrap = styled.div`
 	position: fixed;	
-	width: 375px;
+	width: 395px;
 	height: 85px;
 	bottom: 0;
 	background: #000000;

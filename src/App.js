@@ -8,10 +8,8 @@ function App() {
   return (
     <AppWrap>
       <Header />
-      <Contents>
-      </Contents>
-      <Footer>
-      </Footer>
+      <Contents />
+      <Footer />
     </AppWrap>
       
   );

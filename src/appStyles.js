@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const AppWrap = styled.div`
 	height: 812px;
-	width: 375px;
+	width: 395px;
 	background: #F0F1F4;
 	border-radius: 30px;
 	margin: 0 auto;

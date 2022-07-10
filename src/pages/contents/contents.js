@@ -15,6 +15,7 @@ function Contents() {
 
 	const [element, setElement] = useState(null)
 
+	//적용 예정
 	// const [loading, setLoading] = useState(false)
 	//ref
 
@@ -56,9 +57,9 @@ function Contents() {
 			const response = await axios.get(`${URI}?page=${pageNumber}&sort=${SORT}&api-key=${PRIVATE_KEY}`)
 			if(response.data.response.docs.length > 0) {
 				setContentArray([...contentArray, ...response.data.response.docs])	
-				setLoading(true)
+				// setLoading(true)
 			} else {
-				setLoading(false)
+				// setLoading(false)
 			}
 	}
 	return (

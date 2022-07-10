@@ -5,7 +5,7 @@ export const HeaderWrap = styled.div`
 	position: fixed;
 	top: 0;
 	height: 60px;
-	width: 375px;
+	width: 395px;
 	border-radius: 0px;
 	background: #FFFFFF;
 	border-bottom: solid;
