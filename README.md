@@ -1,3 +1,6 @@
+## github deploy page
+- https://junjunwon.github.io/react-newpaper-project/
+
 ## custom install npm library
 - moment (for datepicker)
 - axios
