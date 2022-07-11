@@ -1,3 +1,6 @@
+## github deploy page
+- https://junjunwon.github.io/react-newpaper-project/
+
 ## custom install npm library
 - moment (for datepicker)
 - axios
@@ -6,7 +9,7 @@
 - styled-reset
 - prop-types
 - styled-components
-- eslint-plugin-react-hooks 
+- eslint-plugin-react-hooks
   - https://www.npmjs.com/package/eslint-plugin-react-hooks
 - react-intersection-observer(holding cuz of restriction of homework)
 
@@ -14,12 +17,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## what i am on working
 - NEW YORK TIMES의 ARTICLE SEARCH API 호출 데이터 출력
-- 
+-
 
 ## what i will be on working
 - create modal
 - datepicker (set formatter)
-- 
+-
 - infinite scroll (after set structure and understand redux)
 
 ## reference
@@ -44,7 +47,7 @@ You may also see any lint errors in the console.
 
 ###  reference
 - moment.js
-  - https://jsikim1.tistory.com/195 
+  - https://jsikim1.tistory.com/195
 - modal
   - https://codesandbox.io/s/to-customize-the-position-of-modal-antd-4-21-5-forked-ys4krh?file=/demo.js
 - redux
