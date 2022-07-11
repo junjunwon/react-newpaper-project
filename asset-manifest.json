@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.55c44835.css",
-    "main.js": "/static/js/main.fa725024.js",
-    "index.html": "/index.html",
-    "main.55c44835.css.map": "/static/css/main.55c44835.css.map",
-    "main.fa725024.js.map": "/static/js/main.fa725024.js.map"
+    "main.css": "/react-newpaper-project/static/css/main.55c44835.css",
+    "main.js": "/react-newpaper-project/static/js/main.718b7e27.js",
+    "index.html": "/react-newpaper-project/index.html",
+    "main.55c44835.css.map": "/react-newpaper-project/static/css/main.55c44835.css.map",
+    "main.718b7e27.js.map": "/react-newpaper-project/static/js/main.718b7e27.js.map"
   },
   "entrypoints": [
     "static/css/main.55c44835.css",
-    "static/js/main.fa725024.js"
+    "static/js/main.718b7e27.js"
   ]
 }
