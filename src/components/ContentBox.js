@@ -1,11 +1,14 @@
 import styled from "styled-components";
+//image
+import star from '../assets/images/star.png'
+import starFill from '../assets/images/starFill.png'
 
 function ContentBox({text, company, name, datetime}) {
 	return (
 		<StyledContentBox>
 			<div className="textBox">
 				{text}
-				<img src="/img/star.png" alt="image"></img>
+				<img src={star} alt="image"></img>
 				{/* <div className="imgBox">
 					
 				</div> */}
@@ -28,7 +31,6 @@ function ContentBox({text, company, name, datetime}) {
 const StyledContentBox = styled.div`
 	position:relative;
 	width: 335px;
-	height: 104px;
 	padding: 10px 20px;
 	background-color:#fff;
 	border-radius: 8px;
@@ -46,7 +48,6 @@ const StyledContentBox = styled.div`
 
 	.textBox {
 		width: 260px;
-		height: 56px;
 		margin-bottom: 15px;
 	}
 	.bottomBox {

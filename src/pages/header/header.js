@@ -4,53 +4,38 @@ import ButtonImg from "../../components/ButtonImage";
 import ModalFilter from "../../components/ModalFilter";
 
 import { useSelector, useDispatch } from "react-redux"
-import { storeFilter } from "../../store/slices/FilterSlice"
+import { storeFilter, setVisible } from "../../store/slices/FilterSlice"
+
+//image
+import search from '../../assets/images/search.png'
+import calendar from '../../assets/images/calendar.png'
+
 function Header() {
-	const { filter } = useSelector((state) => state.filter)
-	const headline = useSelector((state) => state.filter.headline)
+
+	const headerFilter = useSelector((state) => state.filter)
 	const dispatch = useDispatch()
-	dispatch(storeFilter('abc'))
-	//now i can use dispatch(storeFilter())
-	const [loading, setLoading] = useState(false);
-	const [visible, setVisible] = useState(false);
-
-	const handleOk = () => {
-		// setLoading(true);
-		// setTimeout(() => {
-		// 	setLoading(false);
-		// 	setVisible(false);
-		// }, 3000);
-		setLoading(false);
-		setVisible(true);
-		console.log('loading is ', loading)
-		console.log('visible is ', visible)
-
-	};
+	// dispatch(storeFilter('abc'))
 
 	return (
 		<HeaderWrap>
 			<ButtonImg 
 				// text="전체 헤드라인"
-				text={headline}
-				imgPath = "/img/search.png"
-				onClick={() => setVisible(true)}
+				text={headerFilter.headline}
+				imgPath = {search}
+				onClick={() => dispatch(setVisible(true))}
 			/>
 			<ButtonImg 
 				// text="전체 날짜"
-				text={headline}
-				imgPath = "/img/calendar.png"
-				onClick={() => setVisible(true)}
+				text={headerFilter.datetime}
+				imgPath = {calendar}
+				onClick={() => dispatch(setVisible(true))}
 			/>
 			<ButtonImg 
-				text="전체 국가"
+				text={headerFilter.country}
 				imgPath = ""
-				onClick={() => setVisible(true)}
+				onClick={() => dispatch(setVisible(true))}
 			/>
-			<ModalFilter
-				visible={visible}
-				loading={loading}
-				handleOk={handleOk}>
-			</ModalFilter>
+			<ModalFilter />
 		</HeaderWrap>
 	)
 }

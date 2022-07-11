@@ -40,4 +40,12 @@ You may also see any lint errors in the console.
 #### question
 - 페이지별로 상태관리를 어떻게 하는지?
 - hook폴더는 뭘까?
-- 
+
+
+###  reference
+- moment.js
+  - https://jsikim1.tistory.com/195 
+- modal
+  - https://codesandbox.io/s/to-customize-the-position-of-modal-antd-4-21-5-forked-ys4krh?file=/demo.js
+- redux
+  - https://velog.io/@zerozoo-front/Redux-toolkit%EC%9D%98-%EA%B8%B0%EB%B3%B8%EC%A0%81%EC%9D%B8-%EC%82%AC%EC%9A%A9%EB%B2%95-1-

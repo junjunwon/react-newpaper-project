@@ -8,8 +8,8 @@ export const HeaderWrap = styled.div`
 	width: 395px;
 	border-radius: 0px;
 	background: #FFFFFF;
-	border-bottom: solid;
-	border-bottom-color: #F0F1F4;
+	border-bottom: 1px solid;
+	border-bottom-color: #C4C4C4;
 
 	display: flex;
 	align-items: center;

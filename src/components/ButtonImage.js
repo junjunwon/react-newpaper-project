@@ -5,7 +5,6 @@ function ButtonImg({text, imgPath, onClick}) {
 		<StyledButtonImg
 			onClick={onClick}
 		>
-			{/* <img src={imgPath} alt="image"></img> */}
 			<div>{imgPath === '' ? '' : <img src={imgPath} alt="image"></img>}</div>
 			{text}
 		</StyledButtonImg>

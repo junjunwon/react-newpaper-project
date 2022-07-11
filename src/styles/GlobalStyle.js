@@ -37,15 +37,15 @@ const GlobalStyle = createGlobalStyle`
         outline: none;
         padding-left: 10px;
     }
-    .ant-modal {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width:335px !important;
-		height:480px;
-		border-radius: 16px;
-    }
+    // .ant-modal {
+    //     position: absolute;
+    //     top: 50%;
+    //     left: 50%;
+    //     transform: translate(-50%, -50%);
+    //     width:335px !important;
+	// 	height:480px;
+	// 	border-radius: 16px;
+    // }
 `;
 
 export default GlobalStyle;
