@@ -2,12 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import GlobalStyle from './styles/GlobalStyle';
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import { Provider } from "react-redux";
+import config from './store/config';
 
+const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render( 
   <React.StrictMode>
-    <GlobalStyle />
-    <App />
+    <Provider store={config}>
+      <GlobalStyle />
+      <App />
+    </Provider>
   </React.StrictMode>
 );

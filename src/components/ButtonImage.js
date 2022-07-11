@@ -13,6 +13,7 @@ function ButtonImg({text, imgPath, onClick}) {
 }
 
 const StyledButtonImg = styled.button`
+	//button 가운데 정렬 tip -> height and line-height 적용
 	height: 34px;
 	line-height: 34px;
 	padding: 0px 10px;

@@ -26,29 +26,22 @@ const StyledModal = styled(Modal)`
 		// overflow: auto;
 		border-radius: 16px;
 		background-color: #ffffff;
-
-		//position
-		// position: absolute;
-		// left: 20px;
-		// top: 166px;
-
-		//sizing
-		width:335px;
-		height:480px;
-		border-radius: 16px;
 	}
 `;
 
 function ModalFilter({visible, handleOk, loading, inputValue}) {
 	const [form] = Form.useForm();
+	// let temp = true
 	return (
 		<StyledModal
 			style={{
-				left:20,
-				top:166
 			}}
 			visible={visible}
-			onOk={handleOk}
+			// onOk={handleOk}
+			transitionName="none"
+			maskTransitionName="none"
+			// closable={temp}
+			// maskClosable={temp}
 			footer={[
 				<Button
 					key="submit"
