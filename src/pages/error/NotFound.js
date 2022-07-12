@@ -1,6 +1,6 @@
 function NotFound() {
 	return (
-		<div>404 error occure</div>
+		<div className="errorClass">404 error occure</div>
 	)
 }
 

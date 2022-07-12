@@ -22,7 +22,9 @@ export const filterSlice = createSlice({
 	initialState,
 	reducers: {
 		storeFilter:(state, action) => {
-			state = action.payload
+			state.headline = action.payload.headline;
+			state.datetime = action.payload.datetime;
+			state.countries = action.payload.countries;
 		},
 		setVisible:(state, action) => {
 			state.visible = action.payload

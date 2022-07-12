@@ -13,18 +13,12 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="/" element={<Contents />}></Route>
+          <Route path="/react-newpaper-project" element={<Contents />}></Route>
           <Route path="/scrab" element={<Scrab />}></Route>
           <Route path="/*" element={<NotFound></NotFound>}></Route>
         </Routes>
         <Footer />
       </BrowserRouter>
-      
-      {/* <Link to="/"></Link>
-      <Link to="/scrab"></Link> */}
-      {/* <Header />
-      <Contents />
-      <Footer /> */}
     </AppWrap>
       
   );

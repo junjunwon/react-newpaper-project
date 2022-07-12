@@ -1,21 +1,27 @@
 import styled from "styled-components";
-//image
-import star from '../assets/images/star.png'
-import starFill from '../assets/images/starFill.png'
 
-function ContentBox({text, company, name, datetime, onClick}) {
+function ContentBox({webUrl, text, company, name, datetime, onClick, isStarFill}) {
+	if(text.length > 50) {
+		text = text.substring(0,52) + "...";
+	}
+	
+	if(name !== null && name.length > 20) {
+		name = name.substring(0,21) + "...";
+	}
 	return (
 		<StyledContentBox>
 			<div className="textBox">
-				{text}
-				<img onClick={onClick} src={star} alt="image"></img>
+				<div onClick={webUrl}>
+					{text}
+				</div>
+				<img onClick={onClick} src={isStarFill} alt="image"></img>
 			</div>
 			<div className="bottomBox">
 				<div>
 				<span className="companyBox">{company}</span>
 				<span className="nameBox">{name}</span>
 				</div>
-				<div className="dateBox">{datetime}</div>	
+				<div className="dateBox">{datetime.split('T')[0].replaceAll("-",".")}</div>	
 			</div>
 		</StyledContentBox>
 	)
@@ -35,13 +41,17 @@ const StyledContentBox = styled.div`
 	img {
 		position: absolute;
 		right: 14.5px;
-		top: 16.5%;
+		top: 20.5%;
 		bottom: 3.12%;
+		cursor: pointer;
 	}
 
 	.textBox {
-		width: 260px;
+		width: 240px;
+		height: 89px;
+		padding-top: 15px;
 		margin-bottom: 15px;
+		cursor: pointer;
 	}
 	.bottomBox {
 		display: flex;

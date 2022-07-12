@@ -15,7 +15,6 @@ export const FooterWrap = styled.div`
 		flex-direction: row;
 		justify-content: space-around;
 		align-items: center;
-		// padding: 20px 90px;
 		.footerText {
 			color: white;	
 			background-color: transparent;
@@ -23,12 +22,6 @@ export const FooterWrap = styled.div`
 			text-align:center;
 			line-height: 16px;
     	font-size: 10px;
-		}
-		.scrapImg {
-			border: 2px solid #6D6D6D;
-			padding: 5px 4px;
-			text-align:center;
-			border-radius:4px;
 		}
 	}
 `;

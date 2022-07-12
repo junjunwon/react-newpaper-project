@@ -1,4 +1,3 @@
-import moment from 'moment'
 import CustomInput from './Input'
 import {COUNTRY_LIST} from '../consts/Consts'
 //redux
@@ -87,12 +86,12 @@ function ModalFilter() {
 	})
 
 	//check validation
-	const readySubmit = [headline, datetime, countries].every(Boolean) && addRequestStatus === 'idle'
+	// const readySubmit = [headline, datetime, countries].every(Boolean) && addRequestStatus === 'idle'
 	// const readySubmit = addRequestStatus === 'idle'
 	//submit
 	const submitClicked = async () => {
 		
-		if(readySubmit) {
+		if(addRequestStatus === 'idle') {
 			try {
 				setAddRequestStatus('pending')
 				dispatch(setSubmit(true))
@@ -104,11 +103,8 @@ function ModalFilter() {
 				console.error('Failed to set filter : ', err)
 			} finally {
 				setAddRequestStatus('idle')
-				console.log('after clicking button is ', visible)
 			}
-		} else {
-			alert('값을 전부 입력해주세요.')
-		}
+		} 
 	}
 	return (
 		<StyledModal
@@ -126,7 +122,7 @@ function ModalFilter() {
 					type="primary"
 					onClick={submitClicked}
 				>
-					Submit
+					{SET_FILTER}
 				</Button>
 			]}
 		>
