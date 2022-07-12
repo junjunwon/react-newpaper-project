@@ -29,9 +29,13 @@ function Contents() {
 		let scrapedContentList = JSON.parse(localStorage.getItem("scrapedContentList"));
 		if(scrapedContentList === null) scrapedContentList = [];
 
+
 		if(content.isSave) {
 			e.target.src=star	
 			content.isSave=false
+			scrapedContentList = scrapedContentList.filter(object => {
+				return object.web_url !== content.web_url; 
+			})
 		} else {
 			e.target.src=starFill
 			content.isSave=true
@@ -98,7 +102,7 @@ function Contents() {
 			const response = await axios.get(URL)
 			if(response.data.response.docs.length > 0) {
 				// setContentArray([...contentArray, ...response.data.response.docs])	
-				setContentArray([...response.data.response.docs].map(object => {
+				setContentArray([...contentArray, ...response.data.response.docs].map(object => {
 					let i = 0;
 					return {
 						...object,

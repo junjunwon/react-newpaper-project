@@ -1,6 +1,5 @@
 // import { createAsyncThunk } from '@reduxjs/toolkit'
 import { createSlice } from '@reduxjs/toolkit'
-//language
 import {HEADLINE, DATETIME, COUNTRY, TOTAL} from '../../consts/Language'
 
 const initialState = {
