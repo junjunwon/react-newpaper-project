@@ -3,15 +3,12 @@ import styled from "styled-components";
 import star from '../assets/images/star.png'
 import starFill from '../assets/images/starFill.png'
 
-function ContentBox({text, company, name, datetime}) {
+function ContentBox({text, company, name, datetime, onClick}) {
 	return (
 		<StyledContentBox>
 			<div className="textBox">
 				{text}
-				<img src={star} alt="image"></img>
-				{/* <div className="imgBox">
-					
-				</div> */}
+				<img onClick={onClick} src={star} alt="image"></img>
 			</div>
 			<div className="bottomBox">
 				<div>
@@ -20,10 +17,6 @@ function ContentBox({text, company, name, datetime}) {
 				</div>
 				<div className="dateBox">{datetime}</div>	
 			</div>
-			{/* <div className="flexBox">
-				<span className="companyBox">{company}</span>
-				<span className="nameBox">{name}</span>
-			</div> */}
 		</StyledContentBox>
 	)
 }

@@ -7,7 +7,8 @@ const initialState = {
 	headline : TOTAL+' '+HEADLINE,
 	datetime : TOTAL+' '+DATETIME,
 	country : [TOTAL+' '+COUNTRY][0],
-	visible: false
+	visible: false,
+	isSubmited: false
 }
 
 // export const setFilter = createAsyncThunk(
@@ -26,12 +27,12 @@ export const filterSlice = createSlice({
 		},
 		setVisible:(state, action) => {
 			state.visible = action.payload
-			console.log('initialState is ');
-			console.log(initialState);
-		}
-
+		},
+		setSubmit:(state, action) => {
+			state.isSubmited = action.payload
+		},
 	}
 })
 
-export const { storeFilter, setVisible } = filterSlice.actions
+export const { storeFilter, setVisible, setSubmit } = filterSlice.actions
 export default filterSlice

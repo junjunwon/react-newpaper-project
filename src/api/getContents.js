@@ -1,7 +1,14 @@
-import axios from 'axios'
+// import axios from 'axios'
+// import {PRIVATE_KEY, URI, SORT} from "../../consts/Consts"
 
-const getContents = axios.get(`https://api.nytimes.com/svc/search/v2/articlesearch.json?&sort=newest&api-key=3LElvbg68Rv24qIIZ7MV6r3ZrK8p1n4X`)
+// const getContents = async (pageNumber) => {
+// 	const response = await axios.get(`${URI}?page=${pageNumber}&sort=${SORT}&api-key=${PRIVATE_KEY}`)
+// 	if(response.data.response.docs.length > 0) {
+// 		setContentArray([...contentArray, ...response.data.response.docs])	
+// 		// setLoading(true)
+// 	} else {
+// 		// setLoading(false)
+// 	}
+// }
 
-console.log('when app is started ', getContents)
-
-export default {getContents}
+// export default {getContents}

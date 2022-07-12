@@ -11,11 +11,12 @@ const StyledInput = styled(Input)`
 	height:50px;
 `;
 
-function CustomInput({placeholder, value}) {
+function CustomInput({placeholder, value, onChange}) {
 	return (
 		<StyledInput
 			placeholder={placeholder}
 			value={value}
+			onChange={onChange}
 		></StyledInput>
 	)
 }

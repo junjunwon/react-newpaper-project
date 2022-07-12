@@ -3,7 +3,7 @@ import CustomInput from './Input'
 import {COUNTRY_LIST} from '../consts/Consts'
 //redux
 import { useSelector, useDispatch } from "react-redux"
-import { storeFilter, setVisible } from "../store/slices/FilterSlice"
+import { storeFilter, setVisible, setSubmit } from "../store/slices/FilterSlice"
 //language
 import {HEADLINE, DATETIME, COUNTRY, SET_FILTER, INPUT_HEADLINE, INPUT_DATETIME} from '../consts/Language'
 //style
@@ -36,6 +36,7 @@ const StyledModal = styled(Modal)`
 		.countryBtn {
 			background-color: white;	
 			// border-style: 1px solid;
+			border-style:'none';
 			border-color: #e9e9e9;
 			border-radius: 15px;
 			padding: 3px 10px;
@@ -63,21 +64,41 @@ function ModalFilter() {
 	const [datetime, setDatetime] = useState('')
 	const [countries, setCountries] = useState([])
 	const [addRequestStatus, setAddRequestStatus] = useState('idle')
-
+	
 	//event
 	const onHeadlineChanged = (e) => setHeadline(e.target.value)
-	const onDatetimeChanged = (e) => setDatetime(e.target.value)
-	const onCountriesChanged = (e) => setCountries(countries => [...countries, e.target.value]) //need to check
+	const onDatetimeChanged = (date, dateString) => setDatetime(dateString)
+	const onCountriesChanged = ((e) => {
+		if(e.target.localName !== 'button') return 
+		if(countries.includes(e.target.innerText)) {
+			
+			e.target.style.backgroundColor='#ffffff'
+			e.target.style.color='#6D6D6D'
+			setCountries(countries.filter(country => country !== e.target.innerText))
+		} else {
+			//TO DO
+			e.target.style.backgroundColor='#3478F6'
+			e.target.style.color='#ffffff'
+			// e.target.style.border='1px solid'
+			e.target.style.borderColor='#ffffff'
+
+			setCountries(countries => [...countries, e.target.innerText])
+		}
+	})
 
 	//check validation
 	const readySubmit = [headline, datetime, countries].every(Boolean) && addRequestStatus === 'idle'
+	// const readySubmit = addRequestStatus === 'idle'
 	//submit
 	const submitClicked = async () => {
-		dispatch(setVisible(false))
+		
 		if(readySubmit) {
 			try {
 				setAddRequestStatus('pending')
-				await dispatch(storeFilter({headline, datetime, countries})).unwrap()
+				dispatch(setSubmit(true))
+				await dispatch(storeFilter({headline, datetime, countries})) 
+				dispatch(setVisible(false))
+				
 			}
 			catch(err) {
 				console.error('Failed to set filter : ', err)
@@ -85,22 +106,25 @@ function ModalFilter() {
 				setAddRequestStatus('idle')
 				console.log('after clicking button is ', visible)
 			}
+		} else {
+			alert('값을 전부 입력해주세요.')
 		}
 	}
-
-
 	return (
 		<StyledModal
 			style={{
 			}}
 			visible={visible}
 			onOk={() => dispatch(setVisible(false))}
+			maskClosabl={false}
+			closable={false}
+			onCancel={() => dispatch(setVisible(false))}
 			footer={[
 				<Button
 					className='submitBtn'
 					key="submit"
 					type="primary"
-					onClick={() => dispatch(setVisible(false))}
+					onClick={submitClicked}
 				>
 					Submit
 				</Button>
@@ -111,7 +135,7 @@ function ModalFilter() {
 					<CustomInput
 						placeholder={INPUT_HEADLINE}
 						value={headline}
-						onClick={onHeadlineChanged}
+						onChange={onHeadlineChanged}
 					/>
 				</Form.Item>
 				<Form.Item name="datetime" label={DATETIME} >
